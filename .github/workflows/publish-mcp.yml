@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   publish:
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
       id-token: write # GitHub OIDC login to the registry
@@ -26,9 +27,20 @@ jobs:
         run: |
           jq --arg v "${GITHUB_REF_NAME#v}" '.version = $v' server.json > server.tmp
           mv server.tmp server.json
+      - name: Skip if this version is already published
+        id: exists
+        run: |
+          v=$(jq -r .version server.json)
+          if curl -sf "https://registry.modelcontextprotocol.io/v0/servers/io.github.nextleg%2Fnextleg/versions/$v" > /dev/null; then
+            echo "already published $v"
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          fi
       - name: Validate
+        if: steps.exists.outputs.published != 'true'
         run: ./mcp-publisher validate
       - name: Log in with GitHub OIDC
+        if: steps.exists.outputs.published != 'true'
         run: ./mcp-publisher login github-oidc
       - name: Publish
+        if: steps.exists.outputs.published != 'true'
         run: ./mcp-publisher publish
