@@ -18,6 +18,11 @@ jobs:
           node-version: 22
       - name: Check manifests
         run: node scripts/validate.mjs
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
+      - name: Validate server.json against the MCP Registry
+        run: |
+          scripts/install-mcp-publisher.sh
+          ./mcp-publisher validate
       - name: Install from this checkout with the Codex CLI
         env:
           CODEX_HOME: ${{ runner.temp }}/codex-home

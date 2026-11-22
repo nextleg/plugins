@@ -1,0 +1,32 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.nextleg/nextleg",
+  "title": "Nextleg",
+  "description": "AI-first trip planner: ask about your flights, stays and events, and add or change anything.",
+  "version": "0.1.0",
+  "websiteUrl": "https://getnextleg.com/",
+  "repository": {
+    "url": "https://github.com/nextleg/plugins",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/nextleg/plugins/main/plugins/nextleg/assets/nextleg.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"],
+      "theme": "light"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/nextleg/plugins/main/plugins/nextleg/assets/nextleg-dark.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"],
+      "theme": "dark"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.getnextleg.com/mcp"
+    }
+  ]
+}
