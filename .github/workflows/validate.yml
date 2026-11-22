@@ -1,0 +1,31 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check manifests
+        run: node scripts/validate.mjs
+      - name: Install from this checkout with the Codex CLI
+        env:
+          CODEX_HOME: ${{ runner.temp }}/codex-home
+        run: |
+          npm install --prefix "$RUNNER_TEMP/codex" @openai/codex
+          codex="$RUNNER_TEMP/codex/node_modules/.bin/codex"
+          mkdir -p "$CODEX_HOME"
+          "$codex" plugin marketplace add "$GITHUB_WORKSPACE"
+          "$codex" plugin add nextleg@nextleg
+          "$codex" plugin list | grep -q "nextleg@nextleg .*installed, enabled"
+          "$codex" mcp list | grep -q "https://mcp.getnextleg.com/mcp"

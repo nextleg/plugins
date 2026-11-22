@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "nextleg": {
+      "type": "http",
+      "url": "https://mcp.getnextleg.com/mcp"
+    }
+  }
+}

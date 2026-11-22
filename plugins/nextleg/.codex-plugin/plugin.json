@@ -1,0 +1,38 @@
+{
+  "name": "nextleg",
+  "version": "0.1.0",
+  "description": "Your trips, in your AI assistant. Ask about flights, stays and events, add or change anything on a trip, and get flight alerts. Sign in with your Nextleg account.",
+  "author": {
+    "name": "Nextleg",
+    "url": "https://getnextleg.com/"
+  },
+  "homepage": "https://getnextleg.com/",
+  "repository": "https://github.com/nextleg/plugins",
+  "license": "MIT",
+  "keywords": ["travel", "trips", "itinerary", "flights", "flight-tracking", "events"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Nextleg",
+    "shortDescription": "Trips and flights, by chat",
+    "longDescription": "Nextleg is a trip organiser built around the reason you are going: a wedding, a conference, a festival, a race. Forward your booking emails and it builds the itinerary for you. Connect it here and your AI assistant can answer questions about your trips, check a flight, add a hotel or an event, change or remove anything on a trip, and work through the questions Nextleg is waiting on you to answer. It only sees your own account and the trips people have chosen to share with you. It cannot book anything or send email as you. Reading and changing are separate permissions you grant when you sign in. Free records everything. Pro adds live flight tracking: real-time status, gate, delay and cancellation alerts, where the aircraft is, and delay risk.",
+    "developerName": "Nextleg",
+    "category": "Lifestyle",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://getnextleg.com/",
+    "supportURL": "https://getnextleg.com/support",
+    "privacyPolicyURL": "https://getnextleg.com/privacy",
+    "termsOfServiceURL": "https://getnextleg.com/terms",
+    "defaultPrompt": [
+      "What is coming up on my trips?",
+      "Is my next flight on time?",
+      "Add a hotel to my trip"
+    ],
+    "brandColor": "#FF5C14",
+    "brandColorDark": "#FF5C14",
+    "composerIcon": "./assets/nextleg-small.svg",
+    "composerIconDark": "./assets/nextleg-small-dark.svg",
+    "logo": "./assets/nextleg.png",
+    "logoDark": "./assets/nextleg-dark.png"
+  }
+}
