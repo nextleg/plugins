@@ -1,7 +1,7 @@
 {
   "name": "nextleg",
   "version": "0.1.0",
-  "description": "Your trips, in your AI assistant. Ask about flights, stays and events, add or change anything on a trip, and get flight alerts. Sign in with your Nextleg account.",
+  "description": "Your trips, in your AI assistant. Ask about flights, stays and events, add or change anything on a trip. Sign in with your Nextleg account.",
   "author": {
     "name": "Nextleg",
     "url": "https://getnextleg.com/"
@@ -9,16 +9,26 @@
   "homepage": "https://getnextleg.com/",
   "repository": "https://github.com/nextleg/plugins",
   "license": "MIT",
-  "keywords": ["travel", "trips", "itinerary", "flights", "flight-tracking", "events"],
+  "keywords": [
+    "travel",
+    "trips",
+    "itinerary",
+    "flights",
+    "flight-tracking",
+    "events"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Nextleg",
-    "shortDescription": "Trips and flights, by chat",
-    "longDescription": "Nextleg is a trip organiser built around the reason you are going: a wedding, a conference, a festival, a race. Forward your booking emails and it builds the itinerary for you. Connect it here and your AI assistant can answer questions about your trips, check a flight, add a hotel or an event, change or remove anything on a trip, and work through the questions Nextleg is waiting on you to answer. It only sees your own account and the trips people have chosen to share with you. It cannot book anything or send email as you. Reading and changing are separate permissions you grant when you sign in. Free records everything. Pro adds live flight tracking: real-time status, gate, delay and cancellation alerts, where the aircraft is, and delay risk.",
+    "shortDescription": "AI-first trips and flights",
+    "longDescription": "Nextleg is an AI-first trip planner and itinerary app for iOS, Android and the web. Forward a booking confirmation or upload a ticket and AI reads it and adds it to the right trip, alongside everything else you have planned: flights, stays, events, gig tickets, restaurant bookings. It tracks your flights, tells you when something changes, and connects to your AI assistant so you can ask about your trip instead of opening an app. Connect it here and your assistant can answer questions about your trips, check a flight, add a hotel or an event, change or remove anything on a trip, and work through the questions Nextleg is waiting on you to answer. It only sees your own account and the trips people have chosen to share with you. It cannot book anything or send email as you. Reading and changing are separate permissions you grant when you sign in. Free records everything. Pro adds live flight tracking: real-time status, gate, delay and cancellation alerts, where the aircraft is, and delay risk.",
     "developerName": "Nextleg",
-    "category": "Lifestyle",
-    "capabilities": ["Read", "Write"],
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "websiteURL": "https://getnextleg.com/",
     "supportURL": "https://getnextleg.com/support",
     "privacyPolicyURL": "https://getnextleg.com/privacy",

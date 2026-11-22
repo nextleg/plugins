@@ -22,7 +22,7 @@ jobs:
         env:
           CODEX_HOME: ${{ runner.temp }}/codex-home
         run: |
-          npm install --prefix "$RUNNER_TEMP/codex" @openai/codex
+          npm install --prefix "$RUNNER_TEMP/codex" @openai/codex@0.171.0
           codex="$RUNNER_TEMP/codex/node_modules/.bin/codex"
           mkdir -p "$CODEX_HOME"
           "$codex" plugin marketplace add "$GITHUB_WORKSPACE"

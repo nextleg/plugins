@@ -1,11 +1,12 @@
 # Nextleg for AI assistants
 
-Nextleg builds your itinerary from the booking emails you forward it, and tracks your flights. This repo connects it to your AI assistant, so you can ask about your trips in the chat you already use.
+Nextleg is an AI-first trip planner and itinerary app for iOS, Android and the web. Forward a booking confirmation or upload a ticket and AI reads it and adds it to the right trip, alongside everything else you have planned: flights, stays, events, gig tickets, restaurant bookings. It tracks your flights, tells you when something changes, and connects to your AI assistant so you can ask about your trip instead of opening an app.
+
+This repo connects it to your AI assistant, so you can ask about your trips in the chat you already use.
 
 - Ask what is coming up, what time you land, or whether your flight is on time.
 - Add a hotel, an event or a flight to a trip, change it, or remove it.
 - Work through the questions Nextleg is waiting on you to answer, like a held email or a suggested event.
-- Get flight alerts where your assistant supports them (Pro).
 
 It only sees your own account and the trips people have chosen to share with you. It can't book anything and can't send email as you.
 
@@ -46,7 +47,7 @@ Free records everything: unlimited trips, flights, events, hotels and tickets, s
 
 ## What is in this repo
 
-- `plugins/nextleg/` is the plugin: Codex manifest, Claude Code manifest, the MCP connection (`https://mcp.getnextleg.com/mcp`), icons and one skill.
+- `plugins/nextleg/` is the plugin: Codex manifest, Claude Code manifest, the connector (`https://mcp.getnextleg.com/mcp`), icons and one skill.
 - `.agents/plugins/marketplace.json` and `.claude-plugin/marketplace.json` list it for Codex and Claude Code.
 - `scripts/validate.mjs` checks the manifests; CI runs it and installs the plugin with the Codex CLI.
 
