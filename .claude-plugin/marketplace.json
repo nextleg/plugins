@@ -1,0 +1,16 @@
+{
+  "name": "nextleg",
+  "owner": {
+    "name": "Nextleg",
+    "url": "https://getnextleg.com/"
+  },
+  "description": "Nextleg trips and flights in your AI assistant.",
+  "plugins": [
+    {
+      "name": "nextleg",
+      "source": "./plugins/nextleg",
+      "description": "Your trips, in your AI assistant. Ask about flights, stays and events, and add or change anything on a trip.",
+      "category": "travel"
+    }
+  ]
+}

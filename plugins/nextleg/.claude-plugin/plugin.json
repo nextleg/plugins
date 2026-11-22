@@ -1,0 +1,15 @@
+{
+  "name": "nextleg",
+  "version": "0.1.0",
+  "description": "Your trips, in your AI assistant. Ask about flights, stays and events, and add or change anything on a trip. Sign in with your Nextleg account.",
+  "author": {
+    "name": "Nextleg",
+    "url": "https://getnextleg.com/"
+  },
+  "homepage": "https://getnextleg.com/",
+  "repository": "https://github.com/nextleg/plugins",
+  "license": "MIT",
+  "keywords": ["travel", "trips", "itinerary", "flights", "events"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
