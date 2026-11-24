@@ -104,6 +104,20 @@ if (mcp) {
   }
 }
 
+// server.json for the MCP Registry must agree with the plugin and point at files in this repo.
+const server = readJson("server.json");
+if (server) {
+  if (!/^com\.getnextleg\/[a-zA-Z0-9._-]+$/.test(server.name ?? "")) fail("server.json name must be com.getnextleg/*");
+  if ((server.description ?? "").length > 100) fail("server.json description is over the registry's 100 chars");
+  const remote = server.remotes ?? [];
+  if (remote.length !== 1 || remote[0].type !== "streamable-http" || remote[0].url !== "https://mcp.getnextleg.com/mcp") fail("server.json remotes must be the one streamable-http Nextleg MCP URL");
+  if (JSON.stringify(remote).match(/header|secret|token/i)) fail("server.json remotes must carry no headers or secrets");
+  for (const ic of server.icons ?? []) {
+    const m = ic.src?.match(/^https:\/\/raw\.githubusercontent\.com\/nextleg\/plugins\/main\/(.+)$/);
+    if (!m || !existsSync(join(root, m[1]))) fail(`server.json icon ${ic.src} must be a file in this repo on main`);
+  }
+}
+
 // Every skill needs name + description front matter, and its name must match the folder.
 const skillsDir = join(root, dir, "skills");
 for (const d of existsSync(skillsDir) ? readdirSync(skillsDir) : []) {
