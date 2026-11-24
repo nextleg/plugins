@@ -107,7 +107,7 @@ if (mcp) {
 // server.json for the MCP Registry must agree with the plugin and point at files in this repo.
 const server = readJson("server.json");
 if (server) {
-  if (!/^io\.github\.nextleg\/[a-zA-Z0-9._-]+$/.test(server.name ?? "")) fail("server.json name must be io.github.nextleg/*");
+  if (!/^com\.getnextleg\/[a-zA-Z0-9._-]+$/.test(server.name ?? "")) fail("server.json name must be com.getnextleg/*");
   if ((server.description ?? "").length > 100) fail("server.json description is over the registry's 100 chars");
   const remote = server.remotes ?? [];
   if (remote.length !== 1 || remote[0].type !== "streamable-http" || remote[0].url !== "https://mcp.getnextleg.com/mcp") fail("server.json remotes must be the one streamable-http Nextleg MCP URL");

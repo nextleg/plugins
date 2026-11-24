@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.nextleg/nextleg",
+  "name": "com.getnextleg/nextleg",
   "title": "Nextleg",
   "description": "AI-first trip planner: ask about your flights, stays and events, and add or change anything.",
   "version": "0.1.0",

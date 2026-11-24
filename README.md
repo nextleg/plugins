@@ -57,4 +57,4 @@ Licensed MIT. Nextleg is a trading name of Dismal Training Ltd.
 
 ## MCP Registry
 
-The server is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io) as `io.github.nextleg/nextleg` (see `server.json`). Pushing a `v*` tag, or running the "Publish to MCP Registry" workflow, publishes it with GitHub OIDC. A tag sets the registry version from the tag name.
+The server is listed in the [official MCP Registry](https://registry.modelcontextprotocol.io) as `com.getnextleg/nextleg` (see `server.json`). Pushing a `v*` tag, or running the "Publish to MCP Registry" workflow, publishes it with domain (HTTP) auth. A tag sets the registry version from the tag name.
